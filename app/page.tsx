@@ -367,7 +367,7 @@ export default function Page() {
         <div className="work-grid">
           <article className="work-feature" tabIndex={0}>
             <div className="work-art work-art-one">
-              <span>STRATEGY</span>
+              <span></span>
 
               <strong>
                 Know the
