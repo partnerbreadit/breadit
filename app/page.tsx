@@ -1,14 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowUpRight, Menu, X } from 'lucide-react'
-
-export default function Page() {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
-  const [submitting, setSubmitting] = useState(false)
-  const [submitError, setSubmitError] = useState('')
-
+import { ArrowUpRight, Check, Menu, X } from 'lucide-react'
 
 const services = [
   {
@@ -72,6 +65,9 @@ function Brand({ light = false }: { light?: boolean }) {
 
 export default function Page() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
 
   const closeMenu = () => setMenuOpen(false)
 
