@@ -230,7 +230,7 @@ export default function Page() {
       <section id="services" className="services section-wrap">
         <div className="section-heading">
           <div>
-            <div className="section-kicker">02 / What we do</div>
+            <div className="section-kicker"> What we do</div>
             <h2>Everything your business needs to grow.</h2>
           </div>
 
