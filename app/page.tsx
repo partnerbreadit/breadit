@@ -518,8 +518,9 @@ export default function Page() {
           headers: { Accept: 'application/json' },
         })
 
+        const result = await response.json().catch(() => null)
+
         if (!response.ok) {
-          const result = await response.json().catch(() => null)
           const message = result?.errors
             ?.map((item: { message: string }) => item.message)
             .join(' ')
@@ -564,15 +565,22 @@ export default function Page() {
         <div className="form-row">
           <label>
             Name
-            <input name="name" required placeholder="Your name" />
+            <input
+              name="name"
+              type="text"
+              autoComplete="name"
+              required
+              placeholder="Your name"
+            />
           </label>
 
           <label>
             Email
             <input
               name="email"
-              required
               type="email"
+              autoComplete="email"
+              required
               placeholder="you@company.com"
             />
           </label>
@@ -581,18 +589,25 @@ export default function Page() {
         <div className="form-row">
           <label>
             Company name
-            <input name="company" placeholder="Your company" />
+            <input
+              name="company"
+              type="text"
+              autoComplete="organization"
+              placeholder="Your company"
+            />
           </label>
 
           <label>
             Business stage
             <select name="business_stage" defaultValue="">
-              <option value="" disabled>Select one</option>
-              <option>Idea</option>
-              <option>Pre-launch</option>
-              <option>Early-stage</option>
-              <option>Growing</option>
-              <option>Established</option>
+              <option value="" disabled>
+                Select one
+              </option>
+              <option value="Idea">Idea</option>
+              <option value="Pre-launch">Pre-launch</option>
+              <option value="Early-stage">Early-stage</option>
+              <option value="Growing">Growing</option>
+              <option value="Established">Established</option>
             </select>
           </label>
         </div>
@@ -600,13 +615,19 @@ export default function Page() {
         <label>
           Services interested in
           <select name="services_interested_in" defaultValue="">
-            <option value="" disabled>What can we help with?</option>
-            <option>Website &amp; hosting</option>
-            <option>E-commerce</option>
-            <option>SEO / GEO</option>
-            <option>Ads / performance</option>
-            <option>Technology &amp; operations</option>
-            <option>End-to-end solutions</option>
+            <option value="" disabled>
+              What can we help with?
+            </option>
+            <option value="Website & hosting">Website &amp; hosting</option>
+            <option value="E-commerce">E-commerce</option>
+            <option value="SEO / GEO">SEO / GEO</option>
+            <option value="Ads / performance">Ads / performance</option>
+            <option value="Technology & operations">
+              Technology &amp; operations
+            </option>
+            <option value="End-to-end solutions">
+              End-to-end solutions
+            </option>
           </select>
         </label>
 
@@ -626,7 +647,11 @@ export default function Page() {
           </p>
         )}
 
-        <button className="button" type="submit" disabled={submitting}>
+        <button
+          className="button"
+          type="submit"
+          disabled={submitting}
+        >
           {submitting ? 'Sending…' : 'Book a Strategy Call'}
           <ArrowUpRight size={17} />
         </button>
