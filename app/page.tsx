@@ -145,9 +145,9 @@ export default function Page() {
             </a>
           </div>
 
-          <p className="hero-note">
+          {/* <p className="hero-note">
             Built for founders who are ready to move.
-          </p>
+          </p> */}
         </div>
 
         <div className="hero-art">
