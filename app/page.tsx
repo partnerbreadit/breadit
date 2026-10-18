@@ -708,9 +708,13 @@ export default function Page() {
 
               <a href="tel:+919780475201">+91 97804 75201</a>
 
-              <a href="mailto:partner.breadit@gmail.com">
-                partner.breadit@gmail.com
-              </a>
+              <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=partner.breadit@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  partner.breadit@gmail.com
+</a>
             </div>
           </div>
         </div>
@@ -718,7 +722,7 @@ export default function Page() {
         <div className="footer-bottom">
           <span>© 2026 BreadIt4U. All rights reserved.</span>
 
-          <span>Built for founders who are ready to move.</span>
+          {/* <span>Built for founders who are ready to move.</span> */}
         </div>
       </footer>
     </main>
