@@ -369,53 +369,39 @@ export default function Page() {
 
         <div className="work-grid">
           <article className="work-feature">
-            {/* <div className="work-art work-art-one">
-              <span>D2C</span>
+            <div className="work-art work-art-one">
+              <span>STRATEGY</span>
 
               <strong>
-                Make the
+                Know the
                 <br />
-                first click
+                market.
                 <br />
-                count.
+                Then move.
               </strong>
             </div>
 
             <div>
-              <span className="work-tag">Growth experiment</span>
+              <span className="work-tag">Case study</span>
 
-              <h3>E-commerce optimization</h3>
+              <h3>Market research &amp; consulting platform setup</h3>
 
-              <p>Sharper journeys from discovery to checkout.</p>
+              <p>
+                Market research and platform planning for a consulting
+                business, plus competitor analysis, product listing
+                optimisation across Amazon, Flipkart and Blinkit, and the
+                founder&apos;s personal branding.
+              </p>
+
+              <ul className="work-skills">
+                <li>Market research</li>
+                <li>Competitor analysis</li>
+                <li>Consulting platform development</li>
+                <li>Business strategy</li>
+                <li>Marketplace research</li>
+                <li>Personal branding</li>
+              </ul>
             </div>
-            <div className="work-art work-art-one">
-  <span>STRATEGY</span>
-  <strong>
-    Know the
-    <br />
-    market.
-    <br />
-    Then move.
-  </strong>
-</div> */}
-
-<div>
-  <span className="work-tag">Case study</span>
-  <h3>Market research &amp; consulting platform setup</h3>
-  <p>
-    Market research and platform planning for a consulting business, plus
-    competitor analysis, product listing optimisation across Amazon,
-    Flipkart and Blinkit, and the founder&apos;s personal branding.
-  </p>
-  <ul className="work-skills">
-    <li>Market research</li>
-    <li>Competitor analysis</li>
-    <li>Consulting platform development</li>
-    <li>Business strategy</li>
-    <li>Marketplace research</li>
-    <li>Personal branding</li>
-  </ul>
-</div>
           </article>
 
           <article className="work-card">
@@ -429,11 +415,24 @@ export default function Page() {
               </strong>
             </div>
 
-            <span className="work-tag">Selected experience</span>
+            <span className="work-tag">Case study · Marine industry</span>
 
-            <h3>Conversion-focused websites</h3>
+            <h3>Full-stack development &amp; payment automation</h3>
 
-            <p>Case study coming soon.</p>
+            <p>
+              A full-stack web solution with secure online payments, plus a
+              WhatsApp chatbot that handles routine enquiries and guides
+              customers from first message to payment.
+            </p>
+
+            <ul className="work-skills">
+              <li>Full-stack development</li>
+              <li>API integration</li>
+              <li>Payment gateway integration</li>
+              <li>WhatsApp chatbot</li>
+              <li>Workflow automation</li>
+              <li>Customer experience</li>
+            </ul>
           </article>
 
           <article className="work-card">
@@ -505,196 +504,194 @@ export default function Page() {
         </div>
       </section> */}
 
-    
-<section id="contact" className="contact section-wrap">
-  <div className="contact-intro">
-    <div className="section-kicker">Make your next move</div>
+      <section id="contact" className="contact section-wrap">
+        <div className="contact-intro">
+          <div className="section-kicker">Make your next move</div>
 
-    <h2>
-      Ready to get <em>toasted</em> to the top?
-    </h2>
+          <h2>
+            Ready to get <em>toasted</em> to the top?
+          </h2>
 
-    <p>Tell us where you are and where you want to go.</p>
+          <p>Tell us where you are and where you want to go.</p>
 
-    <div className="contact-aside">
-      <a
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=partner.breadit@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        partner.breadit@gmail.com <ArrowUpRight size={14} />
-      </a>
+          <div className="contact-aside">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=partner.breadit@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              partner.breadit@gmail.com <ArrowUpRight size={14} />
+            </a>
 
-      <a href="tel:+919453777109">
-        +91 94537 77109 <ArrowUpRight size={14} />
-      </a>
-    </div>
-  </div>
-
-  <form
-    className="contact-form"
-    action="https://formspree.io/f/xdekkjke"
-    method="POST"
-    onSubmit={async (event) => {
-      event.preventDefault()
-
-      const form = event.currentTarget
-      setSubmitting(true)
-      setSubmitError('')
-
-      try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { Accept: 'application/json' },
-        })
-
-        const result = await response.json().catch(() => null)
-
-        if (!response.ok) {
-          const message = result?.errors
-            ?.map((item: { message: string }) => item.message)
-            .join(' ')
-
-          throw new Error(
-            message || 'Your request could not be sent. Please try again.'
-          )
-        }
-
-        form.reset()
-        setSubmitted(true)
-      } catch (error) {
-        setSubmitError(
-          error instanceof Error
-            ? error.message
-            : 'A connection error occurred. Please try again.'
-        )
-      } finally {
-        setSubmitting(false)
-      }
-    }}
-  >
-    {submitted ? (
-      <div className="success">
-        <div className="success-icon">
-          <Check />
+            <a href="tel:+919453777109">
+              +91 94537 77109 <ArrowUpRight size={14} />
+            </a>
+          </div>
         </div>
 
-        <h3>Perfect. Your request is toasted.</h3>
-        <p>We&apos;ll be in touch to talk through what comes next.</p>
+        <form
+          className="contact-form"
+          action="https://formspree.io/f/xdekkjke"
+          method="POST"
+          onSubmit={async (event) => {
+            event.preventDefault()
 
-        <button
-          className="text-link"
-          type="button"
-          onClick={() => setSubmitted(false)}
+            const form = event.currentTarget
+            setSubmitting(true)
+            setSubmitError('')
+
+            try {
+              const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { Accept: 'application/json' },
+              })
+
+              const result = await response.json().catch(() => null)
+
+              if (!response.ok) {
+                const message = result?.errors
+                  ?.map((item: { message: string }) => item.message)
+                  .join(' ')
+
+                throw new Error(
+                  message || 'Your request could not be sent. Please try again.'
+                )
+              }
+
+              form.reset()
+              setSubmitted(true)
+            } catch (error) {
+              setSubmitError(
+                error instanceof Error
+                  ? error.message
+                  : 'A connection error occurred. Please try again.'
+              )
+            } finally {
+              setSubmitting(false)
+            }
+          }}
         >
-          Send another request
-        </button>
-      </div>
-    ) : (
-      <>
-        <div className="form-row">
-          <label>
-            Name
-            <input
-              name="name"
-              type="text"
-              autoComplete="name"
-              required
-              placeholder="Your name"
-            />
-          </label>
+          {submitted ? (
+            <div className="success">
+              <div className="success-icon">
+                <Check />
+              </div>
 
-          <label>
-            Email
-            <input
-              name="email"
-              type="email"
-              autoComplete="email"
-              required
-              placeholder="you@company.com"
-            />
-          </label>
-        </div>
+              <h3>Perfect. Your request is toasted.</h3>
+              <p>We&apos;ll be in touch to talk through what comes next.</p>
 
-        <div className="form-row">
-          <label>
-            Company name
-            <input
-              name="company"
-              type="text"
-              autoComplete="organization"
-              placeholder="Your company"
-            />
-          </label>
+              <button
+                className="text-link"
+                type="button"
+                onClick={() => setSubmitted(false)}
+              >
+                Send another request
+              </button>
+            </div>
+          ) : (
+            <>
+              <div className="form-row">
+                <label>
+                  Name
+                  <input
+                    name="name"
+                    type="text"
+                    autoComplete="name"
+                    required
+                    placeholder="Your name"
+                  />
+                </label>
 
-          <label>
-            Business stage
-            <select name="business_stage" defaultValue="">
-              <option value="" disabled>
-                Select one
-              </option>
-              <option value="Idea">Idea</option>
-              <option value="Pre-launch">Pre-launch</option>
-              <option value="Early-stage">Early-stage</option>
-              <option value="Growing">Growing</option>
-              <option value="Established">Established</option>
-            </select>
-          </label>
-        </div>
+                <label>
+                  Email
+                  <input
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    placeholder="you@company.com"
+                  />
+                </label>
+              </div>
 
-        <label>
-          Services interested in
-          <select name="services_interested_in" defaultValue="">
-            <option value="" disabled>
-              What can we help with?
-            </option>
-            <option value="Website & hosting">Website &amp; hosting</option>
-            <option value="E-commerce">E-commerce</option>
-            <option value="SEO / GEO">SEO / GEO</option>
-            <option value="Ads / performance">Ads / performance</option>
-            <option value="Technology & operations">
-              Technology &amp; operations
-            </option>
-            <option value="End-to-end solutions">
-              End-to-end solutions
-            </option>
-          </select>
-        </label>
+              <div className="form-row">
+                <label>
+                  Company name
+                  <input
+                    name="company"
+                    type="text"
+                    autoComplete="organization"
+                    placeholder="Your company"
+                  />
+                </label>
 
-        <label>
-          Tell us a little about the requirement
-          <textarea
-            name="requirement"
-            required
-            placeholder="Where are you now, and what would a good next stage look like?"
-            rows={4}
-          />
-        </label>
+                <label>
+                  Business stage
+                  <select name="business_stage" defaultValue="">
+                    <option value="" disabled>
+                      Select one
+                    </option>
+                    <option value="Idea">Idea</option>
+                    <option value="Pre-launch">Pre-launch</option>
+                    <option value="Early-stage">Early-stage</option>
+                    <option value="Growing">Growing</option>
+                    <option value="Established">Established</option>
+                  </select>
+                </label>
+              </div>
 
-        {submitError && (
-          <p className="form-error" role="alert">
-            {submitError}
-          </p>
-        )}
+              <label>
+                Services interested in
+                <select name="services_interested_in" defaultValue="">
+                  <option value="" disabled>
+                    What can we help with?
+                  </option>
+                  <option value="Website & hosting">Website &amp; hosting</option>
+                  <option value="E-commerce">E-commerce</option>
+                  <option value="SEO / GEO">SEO / GEO</option>
+                  <option value="Ads / performance">Ads / performance</option>
+                  <option value="Technology & operations">
+                    Technology &amp; operations
+                  </option>
+                  <option value="End-to-end solutions">
+                    End-to-end solutions
+                  </option>
+                </select>
+              </label>
 
-        <button
-          className="button"
-          type="submit"
-          disabled={submitting}
-        >
-          {submitting ? 'Sending…' : 'Book a Strategy Call'}
-          <ArrowUpRight size={17} />
-        </button>
+              <label>
+                Tell us a little about the requirement
+                <textarea
+                  name="requirement"
+                  required
+                  placeholder="Where are you now, and what would a good next stage look like?"
+                  rows={4}
+                />
+              </label>
 
-        <p className="form-footnote">
-          No hard sell. Just a useful first conversation.
-        </p>
-      </>
-    )}
-  </form>
-</section>
+              {submitError && (
+                <p className="form-error" role="alert">
+                  {submitError}
+                </p>
+              )}
 
+              <button
+                className="button"
+                type="submit"
+                disabled={submitting}
+              >
+                {submitting ? 'Sending…' : 'Book a Strategy Call'}
+                <ArrowUpRight size={17} />
+              </button>
+
+              <p className="form-footnote">
+                No hard sell. Just a useful first conversation.
+              </p>
+            </>
+          )}
+        </form>
+      </section>
 
       <footer className="footer">
         <div className="footer-inner">
