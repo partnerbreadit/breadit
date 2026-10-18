@@ -3,6 +3,11 @@
 import { useState } from 'react'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
 
+export default function Page() {
+  const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
+
 const services = [
   {
     number: '01',
