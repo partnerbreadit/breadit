@@ -497,7 +497,117 @@ export default function Page() {
               +91 94537 77109 <ArrowUpRight size={14} />
             </a>
           </div>
+
+
+
+
+
+          
+          <form>
+          className="contact-form"
+          action="https://formspree.io/f/xdekkjke"
+          method="POST"
+          onSubmit={async (event) => {
+            event.preventDefault()
+            const form = event.currentTarget
+            setSubmitting(true)
+            setSubmitError('')
+
+            try {
+              const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { Accept: 'application/json' },
+              })
+
+              if (!response.ok) {
+                const result = await response.json().catch(() => null)
+                const message = result?.errors?.map((item: { message: string }) => item.message).join(' ')
+                throw new Error(message || 'Your request could not be sent. Please try again.')
+              }
+
+              form.reset()
+              setSubmitted(true)
+            } catch (error) {
+              setSubmitError(error instanceof Error ? error.message : 'A connection error occurred. Please try again.')
+            } finally {
+              setSubmitting(false)
+            }
+          }}
+        >
+          {submitted ? (
+            <div className="success">
+              <div className="success-icon"><Check /></div>
+              <h3>Perfect. Your request is toasted.</h3>
+              <p>We&apos;ll be in touch to talk through what comes next.</p>
+              <button className="text-link" type="button" onClick={() => setSubmitted(false)}>
+                Send another request
+              </button>
+            </div>
+          ) : (
+            <>
+              <div className="form-row">
+                <label>
+                  Name
+                  <input name="name" required placeholder="Your name" />
+                </label>
+                <label>
+                  Email
+                  <input name="email" required type="email" placeholder="you@company.com" />
+                </label>
+              </div>
+
+              <div className="form-row">
+                <label>
+                  Company name
+                  <input name="company" placeholder="Your company" />
+                </label>
+                <label>
+                  Business stage
+                  <select name="business_stage" defaultValue="">
+                    <option value="" disabled>Select one</option>
+                    <option>Idea</option>
+                    <option>Pre-launch</option>
+                    <option>Early-stage</option>
+                    <option>Growing</option>
+                    <option>Established</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                Services interested in
+                <select name="services_interested_in" defaultValue="">
+                  <option value="" disabled>What can we help with?</option>
+                  <option>Website &amp; hosting</option>
+                  <option>E-commerce</option>
+                  <option>SEO / GEO</option>
+                  <option>Ads / performance</option>
+                  <option>Technology &amp; operations</option>
+                  <option>End-to-end solutions</option>
+                </select>
+              </label>
+
+              <label>
+                Tell us a little about the requirement
+                <textarea
+                  name="requirement"
+                  required
+                  placeholder="Where are you now, and what would a good next stage look like?"
+                  rows={4}
+                />
+              </label>
+
+              {submitError && <p className="form-error" role="alert">{submitError}</p>}
+              <button className="button" type="submit" disabled={submitting}>
+                {submitting ? 'Sending…' : 'Book a Strategy Call'} <ArrowUpRight size={17} />
+              </button>
+              <p className="form-footnote">No hard sell. Just a useful first conversation.</p>
+            </>
+          )}
+        </form>
         </div>
+        
       </section>
 
       <footer className="footer">
