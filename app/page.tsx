@@ -356,15 +356,12 @@ export default function Page() {
       <section id="work" className="work section-wrap">
         <div className="section-heading">
           <div>
-            <div className="section-kicker">05 / Selected experience</div>
+            <div className="section-kicker">Selected experience</div>
 
             <h2>Ideas worth putting to work.</h2>
           </div>
 
-          <p>
-            We are building our public portfolio. Until then, here is the kind
-            of work we love to get our hands on.
-          </p>
+         
         </div>
 
         <div className="work-grid">
@@ -382,7 +379,7 @@ export default function Page() {
             </div>
 
             <div>
-              <span className="work-tag">Case study</span>
+              <span className="work-tag">Case study . D2C Brand</span>
 
               <h3>Market research &amp; consulting platform setup</h3>
 
@@ -452,7 +449,7 @@ export default function Page() {
               </strong>
             </div>
 
-            <span className="work-tag">Growth experiment</span>
+            <span className="work-tag">Case Study . New-Gen & Fast Growing Brand</span>
 
             <h3>Organic visibility</h3>
 
