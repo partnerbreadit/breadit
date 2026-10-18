@@ -289,7 +289,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="why-copy">
+        {/* <div className="why-copy">
           <div className="section-kicker">03 / Why startups</div>
 
           <h2>
@@ -325,7 +325,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FOUNDERS */}
       <section className="founders section-wrap">
