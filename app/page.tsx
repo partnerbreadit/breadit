@@ -323,8 +323,7 @@ Leads the tech side of BreadIt4U. Builds the full stack, from the websites custo
               <h4>Sahibjot Singh</h4>
 
               <p>
-                Operations, e-commerce and technology. Focused on building the
-                systems and technology that keep the business moving.
+Runs SEO and marketing, handles inbound calls and keeps day-to-day operations moving, so enquiries turn into real conversations.
               </p>
             </div>
           </article>
@@ -345,7 +344,7 @@ Leads the tech side of BreadIt4U. Builds the full stack, from the websites custo
               <h4>Mridul Harnal</h4>
 
               <p>
-                Co-founder at BreadIt4U. More information coming soon.
+               Turns data into clear decisions through analytics and AI/ML, and works directly with clients to understand what they need.
               </p>
             </div>
           </article>
