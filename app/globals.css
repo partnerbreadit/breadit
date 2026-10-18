@@ -824,6 +824,84 @@ a {
   color: #3b2116;
 }
 
+/* WORK HOVER DETAILS */
+
+.work-feature,
+.work-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.work-feature:focus,
+.work-card:focus {
+  outline: none;
+}
+
+.work-detail {
+  position: absolute;
+  inset: 0;
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: var(--brown);
+  color: var(--cream);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.work-feature:hover .work-detail,
+.work-card:hover .work-detail,
+.work-feature:focus-within .work-detail,
+.work-card:focus-within .work-detail {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.work-detail p {
+  color: #d6bca2;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.work-detail .work-skills {
+  margin: 18px 0 0;
+}
+
+.work-detail .work-skills li {
+  border-color: rgba(255, 248, 236, 0.3);
+  color: var(--cream);
+}
+
+/* Touch screens can't hover, so show the details normally */
+@media (hover: none) {
+  .work-detail {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: none;
+    color: var(--brown);
+    padding: 0;
+  }
+
+  .work-detail p {
+    color: var(--muted);
+  }
+
+  .work-detail .work-skills li {
+    border-color: rgba(60, 32, 20, 0.2);
+    color: #3b2116;
+  }
+}
+
 /* CAPABILITIES */
 
 .capabilities {
