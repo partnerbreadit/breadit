@@ -275,7 +275,7 @@ export default function Page() {
       <section className="founders section-wrap">
         <div className="section-heading">
           <div>
-            <div className="section-kicker">04 / The people</div>
+            <div className="section-kicker"> The people</div>
             <h2>Built from hands-on startup experience.</h2>
           </div>
 
