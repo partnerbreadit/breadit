@@ -145,9 +145,9 @@ export default function Page() {
             </a>
           </div>
 
-          {/* <p className="hero-note">
+          <p className="hero-note">
             Built for founders who are ready to move.
-          </p> */}
+          </p>
         </div>
 
         <div className="hero-art">
@@ -171,31 +171,23 @@ export default function Page() {
       </section>
 
       <section id="about" className="about section-wrap">
-        <div className="section-kicker"> The partner behind the plan</div>
+        <div className="section-kicker">The partner behind the plan</div>
 
         <div className="about-grid">
-          <div>
-            <h2>
-              Solutions built for the way startups{' '}
-              <span>actually grow.</span>
-            </h2>
+          <h2>
+            Solutions built for the way startups <span>actually grow.</span>
+          </h2>
 
+          <div className="about-detail">
             <p className="large-copy">
               Startups rarely need another vendor that hands over a deliverable
               and disappears.
             </p>
-          </div>
-
-          <div className="about-detail">
-            <p>
-              They need a partner who understands that priorities change
-              quickly, budgets are limited, experimentation matters, and every
-              solution has to connect to actual business outcomes.
-            </p>
 
             <p>
-              That is where we come in: hands-on, founder-led support that
-              brings strategy, technology and doing under one roof.
+              They need a partner who moves fast, stays lean and ties every
+              solution to real business outcomes. That is where we come in:
+              hands-on, founder-led support.
             </p>
 
             <a href="#contact" className="arrow-link">
@@ -204,25 +196,56 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="principles">
-          <div>
-            <b>01</b>
-            <span>Move with clarity</span>
+        <div className="flowmap">
+          <span className="flowmap-title">How we work</span>
+
+          <svg
+            className="flowmap-line"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <polyline points="2,70 8,62 32,45 56,28 80,11 95,3" />
+          </svg>
+
+          <span className="flowmap-arrow" aria-hidden="true">
+            ↗
+          </span>
+
+          <div className="flowmap-node node-1">
+            <span className="flowmap-dot" />
+            <div className="flowmap-label">
+              <b>01</b>
+              <h4>Discover</h4>
+              <p>Understand your business, market and goals.</p>
+            </div>
           </div>
 
-          <div>
-            <b>02</b>
-            <span>Keep it practical</span>
+          <div className="flowmap-node node-2">
+            <span className="flowmap-dot" />
+            <div className="flowmap-label">
+              <b>02</b>
+              <h4>Build</h4>
+              <p>Websites, stores and systems that work together.</p>
+            </div>
           </div>
 
-          <div>
-            <b>03</b>
-            <span>Learn in public</span>
+          <div className="flowmap-node node-3">
+            <span className="flowmap-dot" />
+            <div className="flowmap-label">
+              <b>03</b>
+              <h4>Launch</h4>
+              <p>Go live and get seen by the right people.</p>
+            </div>
           </div>
 
-          <div>
-            <b>04</b>
-            <span>Build for the next stage</span>
+          <div className="flowmap-node node-4">
+            <span className="flowmap-dot" />
+            <div className="flowmap-label">
+              <b>04</b>
+              <h4>Grow</h4>
+              <p>Measure what works and keep improving.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -230,12 +253,13 @@ export default function Page() {
       <section id="services" className="services section-wrap">
         <div className="section-heading">
           <div>
-            <div className="section-kicker"> What we do</div>
+            <div className="section-kicker">What we do</div>
             <h2>Everything your business needs to grow.</h2>
           </div>
 
           <p>
-          
+            One focused partner for the work that gets your business built,
+            discovered, trusted and chosen.
           </p>
         </div>
 
@@ -244,6 +268,7 @@ export default function Page() {
             <article
               className={`service-card ${service.size}`}
               key={service.number}
+              tabIndex={0}
             >
               <span className="service-number">{service.number}</span>
 
@@ -274,12 +299,13 @@ export default function Page() {
       <section className="founders section-wrap">
         <div className="section-heading">
           <div>
-            <div className="section-kicker"> The people</div>
+            <div className="section-kicker">The people</div>
             <h2>Built from hands-on startup experience.</h2>
           </div>
 
           <p>
-            
+            Young enough to move fast. Experienced enough to know that the
+            details matter.
           </p>
         </div>
 
@@ -291,7 +317,7 @@ export default function Page() {
 
               <h3>Sakhyam Shree</h3>
 
-              <p>Marketing · Growth · Business development</p>
+              <p>Full-stack development · Technology</p>
             </div>
 
             <div className="founder-popup">
@@ -300,7 +326,8 @@ export default function Page() {
               <h4>Sakhyam Shree</h4>
 
               <p>
-Leads the tech side of BreadIt4U. Builds the full stack, from the websites customers see to the systems running behind them.
+                Leads the tech side of BreadIt4U. Builds the full stack, from
+                the websites customers see to the systems running behind them.
               </p>
             </div>
           </article>
@@ -312,7 +339,7 @@ Leads the tech side of BreadIt4U. Builds the full stack, from the websites custo
 
               <h3>Sahibjot Singh</h3>
 
-              <p>Operations · E-commerce · Technology</p>
+              <p>SEO · Marketing · Inbound calls · Operations</p>
             </div>
 
             <div className="founder-popup">
@@ -321,7 +348,9 @@ Leads the tech side of BreadIt4U. Builds the full stack, from the websites custo
               <h4>Sahibjot Singh</h4>
 
               <p>
-Runs SEO and marketing, handles inbound calls and keeps day-to-day operations moving, so enquiries turn into real conversations.
+                Runs SEO and marketing, handles inbound calls and keeps
+                day-to-day operations moving, so enquiries turn into real
+                conversations.
               </p>
             </div>
           </article>
@@ -333,7 +362,7 @@ Runs SEO and marketing, handles inbound calls and keeps day-to-day operations mo
 
               <h3>Mridul Harnal</h3>
 
-              <p>Co-founder</p>
+              <p>Analytics · AI/ML · Client interaction</p>
             </div>
 
             <div className="founder-popup">
@@ -342,7 +371,8 @@ Runs SEO and marketing, handles inbound calls and keeps day-to-day operations mo
               <h4>Mridul Harnal</h4>
 
               <p>
-               Turns data into clear decisions through analytics and AI/ML, and works directly with clients to understand what they need.
+                Turns data into clear decisions through analytics and AI/ML,
+                and works directly with clients to understand what they need.
               </p>
             </div>
           </article>
@@ -357,13 +387,16 @@ Runs SEO and marketing, handles inbound calls and keeps day-to-day operations mo
             <h2>Ideas worth putting to work.</h2>
           </div>
 
-         
+          <p>
+            We are building our public portfolio. Until then, here is the kind
+            of work we love to get our hands on.
+          </p>
         </div>
 
         <div className="work-grid">
           <article className="work-feature" tabIndex={0}>
             <div className="work-art work-art-one">
-              <span></span>
+              <span>STRATEGY</span>
 
               <strong>
                 Know the
@@ -375,7 +408,7 @@ Runs SEO and marketing, handles inbound calls and keeps day-to-day operations mo
             </div>
 
             <div>
-              <span className="work-tag">Case study . D2C Brand</span>
+              <span className="work-tag">Case study</span>
 
               <h3>Market research &amp; consulting platform setup</h3>
 
@@ -401,7 +434,7 @@ Runs SEO and marketing, handles inbound calls and keeps day-to-day operations mo
 
           <article className="work-card" tabIndex={0}>
             <div className="work-art work-art-two">
-              <span></span>
+              <span>WEB</span>
 
               <strong>
                 Built to
@@ -445,7 +478,7 @@ Runs SEO and marketing, handles inbound calls and keeps day-to-day operations mo
               </strong>
             </div>
 
-            <span className="work-tag">Case Study . Next-Gen Growing Brand</span>
+            <span className="work-tag">Growth experiment</span>
 
             <h3>Organic visibility</h3>
 
