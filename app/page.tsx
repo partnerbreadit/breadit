@@ -486,7 +486,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="capabilities">
+      {/* <section className="capabilities">
         <div className="section-wrap">
           <div className="cap-header">
             <div className="section-kicker">06 / What you get</div>
@@ -531,7 +531,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section id="contact" className="contact section-wrap">
   <div className="contact-intro">
