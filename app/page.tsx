@@ -449,7 +449,7 @@ export default function Page() {
               </strong>
             </div>
 
-            <span className="work-tag">Case Study . New-Gen & Fast Growing Brand</span>
+            <span className="work-tag">Case Study . Next-Gen Growing Brand</span>
 
             <h3>Organic visibility</h3>
 
