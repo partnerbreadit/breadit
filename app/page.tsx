@@ -369,7 +369,7 @@ export default function Page() {
 
         <div className="work-grid">
           <article className="work-feature">
-            <div className="work-art work-art-one">
+            {/* <div className="work-art work-art-one">
               <span>D2C</span>
 
               <strong>
@@ -388,6 +388,34 @@ export default function Page() {
 
               <p>Sharper journeys from discovery to checkout.</p>
             </div>
+            <div className="work-art work-art-one">
+  <span>STRATEGY</span>
+  <strong>
+    Know the
+    <br />
+    market.
+    <br />
+    Then move.
+  </strong>
+</div> */}
+
+<div>
+  <span className="work-tag">Case study</span>
+  <h3>Market research &amp; consulting platform setup</h3>
+  <p>
+    Market research and platform planning for a consulting business, plus
+    competitor analysis, product listing optimisation across Amazon,
+    Flipkart and Blinkit, and the founder&apos;s personal branding.
+  </p>
+  <ul className="work-skills">
+    <li>Market research</li>
+    <li>Competitor analysis</li>
+    <li>Consulting platform development</li>
+    <li>Business strategy</li>
+    <li>Marketplace research</li>
+    <li>Personal branding</li>
+  </ul>
+</div>
           </article>
 
           <article className="work-card">
