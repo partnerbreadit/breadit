@@ -279,8 +279,7 @@ export default function Page() {
           </div>
 
           <p>
-            Young enough to move fast. Experienced enough to know that the
-            details matter.
+            
           </p>
         </div>
 
