@@ -366,7 +366,7 @@ a {
 
 .flowmap {
   position: relative;
-  height: 420px;
+  height: 440px;
   margin-top: 90px;
   background: var(--brown);
   overflow: hidden;
@@ -402,7 +402,7 @@ a {
 .flowmap-arrow {
   position: absolute;
   left: 95%;
-  top: 3%;
+  top: 9%;
   transform: translate(-60%, -40%);
   color: var(--gold);
   font-size: 42px;
@@ -417,22 +417,22 @@ a {
 
 .node-1 {
   left: 8%;
-  top: 62%;
+  top: 68%;
 }
 
 .node-2 {
   left: 32%;
-  top: 45%;
+  top: 51%;
 }
 
 .node-3 {
   left: 56%;
-  top: 28%;
+  top: 34%;
 }
 
 .node-4 {
   left: 80%;
-  top: 11%;
+  top: 17%;
 }
 
 .flowmap-dot {
