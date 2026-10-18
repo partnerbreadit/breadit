@@ -702,7 +702,7 @@ export default function Page() {
             <div>
               <b>Find us</b>
 
-              <span>Vellore, Tamil Nadu, India</span>
+              <span>Gurgoan, Haryana, India</span>
 
               <a href="tel:+919453777109">+91 94537 77109</a>
 
