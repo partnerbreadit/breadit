@@ -1304,7 +1304,27 @@ a {
   .footer-links {
     grid-template-columns: 1fr 1fr;
   }
+.work-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 0;
+  list-style: none;
+}
 
+.work-skills li {
+  padding: 6px 12px;
+  border: 1px solid rgba(60, 32, 20, 0.2);
+  border-radius: 999px;
+  font-size: 12px;
+  color: #3b2116;
+}
+
+
+
+
+  
   .footer-links div:last-child {
     grid-column: span 2;
   }
