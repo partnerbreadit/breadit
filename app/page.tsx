@@ -302,8 +302,7 @@ export default function Page() {
               <h4>Sakhyam Shree</h4>
 
               <p>
-                Marketing, growth and business development. Focused on
-                building brands, driving growth and creating opportunities.
+Leads the tech side of BreadIt4U. Builds the full stack, from the websites customers see to the systems running behind them.
               </p>
             </div>
           </article>
