@@ -235,8 +235,7 @@ export default function Page() {
           </div>
 
           <p>
-            One focused partner for the work that gets your business built,
-            discovered, trusted and chosen.
+          
           </p>
         </div>
 
