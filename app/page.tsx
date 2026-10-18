@@ -171,7 +171,7 @@ export default function Page() {
       </section>
 
       <section id="about" className="about section-wrap">
-        <div className="section-kicker">01 / The partner behind the plan</div>
+        <div className="section-kicker"> The partner behind the plan</div>
 
         <div className="about-grid">
           <div>
