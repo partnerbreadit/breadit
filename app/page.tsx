@@ -87,10 +87,6 @@ export default function Page() {
               Case Studies
             </a>
 
-            <a href="#why" onClick={closeMenu}>
-              Why Us
-            </a>
-
             <a href="#contact" onClick={closeMenu}>
               Contact
             </a>
@@ -270,60 +266,6 @@ export default function Page() {
             </article>
           ))}
         </div>
-      </section>
-
-      <section id="why" className="why section-wrap">
-        <div className="why-visual">
-          <div className="why-quote">
-            Good work
-            <br />
-            <em>moves.</em>
-          </div>
-
-          <div className="line-path" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-            <span />
-          </div>
-        </div>
-
-        {/* <div className="why-copy">
-          <div className="section-kicker">03 / Why startups</div>
-
-          <h2>
-            Startups don&apos;t need more vendors. They need one partner that{' '}
-            <span>moves.</span>
-          </h2>
-
-          <div className="why-list">
-            <div>
-              <b>MOVE FAST</b>
-              <p>Test, learn and adapt without six layers of approvals.</p>
-            </div>
-
-            <div>
-              <b>STAY LEAN</b>
-              <p>
-                Focus budget and effort where they can create measurable
-                movement.
-              </p>
-            </div>
-
-            <div>
-              <b>CONNECT THE DOTS</b>
-              <p>
-                Strategy, website, hosting, e-commerce, marketing and
-                analytics should work together.
-              </p>
-            </div>
-
-            <div>
-              <b>BUILD FOR NOW — AND NEXT</b>
-              <p>Your solutions should evolve as your startup does.</p>
-            </div>
-          </div>
-        </div> */}
       </section>
 
       {/* FOUNDERS */}
