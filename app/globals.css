@@ -799,6 +799,29 @@ a {
   font-size: 12px;
   color: var(--muted);
   margin-top: 0;
+  line-height: 1.5;
+}
+
+.work-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.work-card > .work-skills {
+  margin-left: 22px;
+  margin-right: 22px;
+}
+
+.work-skills li {
+  padding: 6px 12px;
+  border: 1px solid rgba(60, 32, 20, 0.2);
+  border-radius: 999px;
+  font-size: 12px;
+  color: #3b2116;
 }
 
 /* CAPABILITIES */
@@ -982,6 +1005,12 @@ a {
 .form-footnote {
   color: #a58d7b;
   font-size: 11px;
+  margin: 0;
+}
+
+.form-error {
+  color: #b3341b;
+  font-size: 13px;
   margin: 0;
 }
 
@@ -1304,27 +1333,7 @@ a {
   .footer-links {
     grid-template-columns: 1fr 1fr;
   }
-.work-skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
-  padding: 0;
-  list-style: none;
-}
 
-.work-skills li {
-  padding: 6px 12px;
-  border: 1px solid rgba(60, 32, 20, 0.2);
-  border-radius: 999px;
-  font-size: 12px;
-  color: #3b2116;
-}
-
-
-
-
-  
   .footer-links div:last-child {
     grid-column: span 2;
   }
