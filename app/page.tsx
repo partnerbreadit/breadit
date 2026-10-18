@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowUpRight, Check, Menu, X } from 'lucide-react'
+import { ArrowUpRight, Menu, X } from 'lucide-react'
 
 const services = [
   {
@@ -65,9 +65,6 @@ function Brand({ light = false }: { light?: boolean }) {
 
 export default function Page() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
-  const [submitting, setSubmitting] = useState(false)
-  const [submitError, setSubmitError] = useState('')
 
   const closeMenu = () => setMenuOpen(false)
 
@@ -88,10 +85,6 @@ export default function Page() {
 
             <a href="#work" onClick={closeMenu}>
               Case Studies
-            </a>
-
-            <a href="#why" onClick={closeMenu}>
-              Why Us
             </a>
 
             <a href="#contact" onClick={closeMenu}>
@@ -275,23 +268,6 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="why" className="why section-wrap">
-        <div className="why-visual">
-          <div className="why-quote">Good work<br /><em>moves.</em></div>
-          <div className="line-path" aria-hidden="true"><span /><span /><span /><span /></div>
-        </div>
-        <div className="why-copy">
-          <div className="section-kicker">03 / Why startups</div>
-          <h2>Startups don&apos;t need more vendors. They need one partner that <span>moves.</span></h2>
-          <div className="why-list">
-            <div><b>MOVE FAST</b><p>Test, learn and adapt without six layers of approvals.</p></div>
-            <div><b>STAY LEAN</b><p>Focus budget and effort where they can create measurable movement.</p></div>
-            <div><b>CONNECT THE DOTS</b><p>Strategy, website, hosting, e-commerce, marketing and analytics should work together.</p></div>
-            <div><b>BUILD FOR NOW — AND NEXT</b><p>Your solutions should evolve as your startup does.</p></div>
-          </div>
-        </div>
-      </section>
-
       {/* FOUNDERS */}
       <section className="founders section-wrap">
         <div className="section-heading">
@@ -451,137 +427,78 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="capabilities">
+      {/* <section className="capabilities">
         <div className="section-wrap">
           <div className="cap-header">
             <div className="section-kicker">06 / What you get</div>
-            <h2>Less noise.<br /><span>More movement.</span></h2>
+
+            <h2>
+              Less noise.
+              <br />
+              <span>More movement.</span>
+            </h2>
           </div>
+
           <div className="cap-grid">
-            <div><strong>FULL-STACK</strong><p>Websites + hosting + e-commerce + marketing + analytics + technology.</p></div>
-            <div><strong>HANDS-ON</strong><p>Strategy doesn&apos;t stop at a presentation.</p></div>
-            <div><strong>FOUNDER-LED</strong><p>Direct involvement from the people building the agency.</p></div>
-            <div><strong>MULTIPLE INDUSTRIES</strong><p>Experience across different startup and business environments.</p></div>
-          </div>
-        </div>
-      </section>
-<section id="contact" className="contact section-wrap">
-        <div className="contact-intro">
-          <div className="section-kicker">07 / Make your next move</div>
-          <h2>Ready to get <em>toasted</em> to the top?</h2>
-          <p>Tell us where you are, where you want to go, and we&apos;ll figure out what needs to happen next.</p>
-          <div className="contact-aside">
-            <span>Prefer email?</span>
-            <a href="mailto:partner.breadit@gmail.com">partner.breadit@gmail.com <ArrowUpRight size={14} /></a>
-          </div>
-        </div>
+            <div>
+              <strong>FULL-STACK</strong>
 
-        <form
-          className="contact-form"
-          action="https://formspree.io/f/xdekkjke"
-          method="POST"
-          onSubmit={async (event) => {
-            event.preventDefault()
-            const form = event.currentTarget
-            setSubmitting(true)
-            setSubmitError('')
-
-            try {
-              const response = await fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: { Accept: 'application/json' },
-              })
-
-              if (!response.ok) {
-                const result = await response.json().catch(() => null)
-                const message = result?.errors?.map((item: { message: string }) => item.message).join(' ')
-                throw new Error(message || 'Your request could not be sent. Please try again.')
-              }
-
-              form.reset()
-              setSubmitted(true)
-            } catch (error) {
-              setSubmitError(error instanceof Error ? error.message : 'A connection error occurred. Please try again.')
-            } finally {
-              setSubmitting(false)
-            }
-          }}
-        >
-          {submitted ? (
-            <div className="success">
-              <div className="success-icon"><Check /></div>
-              <h3>Perfect. Your request is toasted.</h3>
-              <p>We&apos;ll be in touch to talk through what comes next.</p>
-              <button className="text-link" type="button" onClick={() => setSubmitted(false)}>
-                Send another request
-              </button>
+              <p>
+                Websites + hosting + e-commerce + marketing + analytics +
+                technology.
+              </p>
             </div>
-          ) : (
-            <>
-              <div className="form-row">
-                <label>
-                  Name
-                  <input name="name" required placeholder="Your name" />
-                </label>
-                <label>
-                  Email
-                  <input name="email" required type="email" placeholder="you@company.com" />
-                </label>
-              </div>
 
-              <div className="form-row">
-                <label>
-                  Company name
-                  <input name="company" placeholder="Your company" />
-                </label>
-                <label>
-                  Business stage
-                  <select name="business_stage" defaultValue="">
-                    <option value="" disabled>Select one</option>
-                    <option>Idea</option>
-                    <option>Pre-launch</option>
-                    <option>Early-stage</option>
-                    <option>Growing</option>
-                    <option>Established</option>
-                  </select>
-                </label>
-              </div>
+            <div>
+              <strong>HANDS-ON</strong>
 
-              <label>
-                Services interested in
-                <select name="services_interested_in" defaultValue="">
-                  <option value="" disabled>What can we help with?</option>
-                  <option>Website &amp; hosting</option>
-                  <option>E-commerce</option>
-                  <option>SEO / GEO</option>
-                  <option>Ads / performance</option>
-                  <option>Technology &amp; operations</option>
-                  <option>End-to-end solutions</option>
-                </select>
-              </label>
+              <p>Strategy doesn&apos;t stop at a presentation.</p>
+            </div>
 
-              <label>
-                Tell us a little about the requirement
-                <textarea
-                  name="requirement"
-                  required
-                  placeholder="Where are you now, and what would a good next stage look like?"
-                  rows={4}
-                />
-              </label>
+            <div>
+              <strong>FOUNDER-LED</strong>
 
-              {submitError && <p className="form-error" role="alert">{submitError}</p>}
-              <button className="button" type="submit" disabled={submitting}>
-                {submitting ? 'Sending…' : 'Book a Strategy Call'} <ArrowUpRight size={17} />
-              </button>
-              <p className="form-footnote">No hard sell. Just a useful first conversation.</p>
-            </>
-          )}
-        </form>
+              <p>
+                Direct involvement from the people building the agency.
+              </p>
+            </div>
+
+            <div>
+              <strong>MULTIPLE INDUSTRIES</strong>
+
+              <p>
+                Experience across different startup and business environments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      <section id="contact" className="contact section-wrap">
+        <div className="contact-intro">
+          <div className="section-kicker">Make your next move</div>
+
+          <h2>
+            Ready to get <em>toasted</em> to the top?
+          </h2>
+
+          <p>Tell us where you are and where you want to go.</p>
+
+          <div className="contact-aside">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=partner.breadit@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              partner.breadit@gmail.com <ArrowUpRight size={14} />
+            </a>
+
+            <a href="tel:+919453777109">
+              +91 94537 77109 <ArrowUpRight size={14} />
+            </a>
+          </div>
+        </div>
       </section>
-
-      
 
       <footer className="footer">
         <div className="footer-inner">
@@ -616,14 +533,16 @@ export default function Page() {
             <div>
               <b>Find us</b>
 
-              <span>Vellore, Tamil Nadu, India</span>
+              <span>Gurugram, Haryana, India</span>
 
               <a href="tel:+919453777109">+91 94537 77109</a>
 
               <a href="tel:+919780475201">+91 97804 75201</a>
 
               <a
-                href="mailto:partner.breadit@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=partner.breadit@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 partner.breadit@gmail.com
               </a>
