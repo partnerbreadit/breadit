@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowUpRight, Check, Menu, X } from 'lucide-react'
+import { ArrowUpRight, Menu, X } from 'lucide-react'
 
 const services = [
   {
@@ -65,7 +65,6 @@ function Brand({ light = false }: { light?: boolean }) {
 
 export default function Page() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
 
   const closeMenu = () => setMenuOpen(false)
 
@@ -324,8 +323,8 @@ export default function Page() {
               <p>Your solutions should evolve as your startup does.</p>
             </div>
           </div>
-        </div>
-      </section> */}
+        </div> */}
+      </section>
 
       {/* FOUNDERS */}
       <section className="founders section-wrap">
@@ -534,32 +533,30 @@ export default function Page() {
       </section> */}
 
       <section id="contact" className="contact section-wrap">
-  <div className="contact-intro">
-    <div className="section-kicker">Make your next move</div>
+        <div className="contact-intro">
+          <div className="section-kicker">Make your next move</div>
 
-    <h2>
-      Ready to get <em>toasted</em> to the top?
-    </h2>
+          <h2>
+            Ready to get <em>toasted</em> to the top?
+          </h2>
 
-    <p>Tell us where you are and where you want to go.</p>
+          <p>Tell us where you are and where you want to go.</p>
 
-    <div className="contact-aside">
-      <a
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=partner.breadit@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        partner.breadit@gmail.com <ArrowUpRight size={14} />
-      </a>
+          <div className="contact-aside">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=partner.breadit@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              partner.breadit@gmail.com <ArrowUpRight size={14} />
+            </a>
 
-      <a href="tel:+919453777109">
-        +91 94537 77109 <ArrowUpRight size={14} />
-      </a>
-    </div>
-  </div>
-
-
-</section>
+            <a href="tel:+919453777109">
+              +91 94537 77109 <ArrowUpRight size={14} />
+            </a>
+          </div>
+        </div>
+      </section>
 
       <footer className="footer">
         <div className="footer-inner">
@@ -594,19 +591,19 @@ export default function Page() {
             <div>
               <b>Find us</b>
 
-              <span>Gurgoan, Haryana, India</span>
+              <span>Gurugram, Haryana, India</span>
 
               <a href="tel:+919453777109">+91 94537 77109</a>
 
               <a href="tel:+919780475201">+91 97804 75201</a>
 
               <a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=partner.breadit@gmail.com"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  partner.breadit@gmail.com
-</a>
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=partner.breadit@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                partner.breadit@gmail.com
+              </a>
             </div>
           </div>
         </div>
