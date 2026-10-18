@@ -368,7 +368,7 @@ export default function Page() {
         </div>
 
         <div className="work-grid">
-          <article className="work-feature">
+          <article className="work-feature" tabIndex={0}>
             <div className="work-art work-art-one">
               <span>STRATEGY</span>
 
@@ -386,25 +386,27 @@ export default function Page() {
 
               <h3>Market research &amp; consulting platform setup</h3>
 
-              <p>
-                Market research and platform planning for a consulting
-                business, plus competitor analysis, product listing
-                optimisation across Amazon, Flipkart and Blinkit, and the
-                founder&apos;s personal branding.
-              </p>
+              <div className="work-detail">
+                <p>
+                  Market research and platform planning for a consulting
+                  business, plus competitor analysis, product listing
+                  optimisation across Amazon, Flipkart and Blinkit, and the
+                  founder&apos;s personal branding.
+                </p>
 
-              <ul className="work-skills">
-                <li>Market research</li>
-                <li>Competitor analysis</li>
-                <li>Consulting platform development</li>
-                <li>Business strategy</li>
-                <li>Marketplace research</li>
-                <li>Personal branding</li>
-              </ul>
+                <ul className="work-skills">
+                  <li>Market research</li>
+                  <li>Competitor analysis</li>
+                  <li>Consulting platform development</li>
+                  <li>Business strategy</li>
+                  <li>Marketplace research</li>
+                  <li>Personal branding</li>
+                </ul>
+              </div>
             </div>
           </article>
 
-          <article className="work-card">
+          <article className="work-card" tabIndex={0}>
             <div className="work-art work-art-two">
               <span>WEB</span>
 
@@ -419,20 +421,22 @@ export default function Page() {
 
             <h3>Full-stack development &amp; payment automation</h3>
 
-            <p>
-              A full-stack web solution with secure online payments, plus a
-              WhatsApp chatbot that handles routine enquiries and guides
-              customers from first message to payment.
-            </p>
+            <div className="work-detail">
+              <p>
+                A full-stack web solution with secure online payments, plus a
+                WhatsApp chatbot that handles routine enquiries and guides
+                customers from first message to payment.
+              </p>
 
-            <ul className="work-skills">
-              <li>Full-stack development</li>
-              <li>API integration</li>
-              <li>Payment gateway integration</li>
-              <li>WhatsApp chatbot</li>
-              <li>Workflow automation</li>
-              <li>Customer experience</li>
-            </ul>
+              <ul className="work-skills">
+                <li>Full-stack development</li>
+                <li>API integration</li>
+                <li>Payment gateway integration</li>
+                <li>WhatsApp chatbot</li>
+                <li>Workflow automation</li>
+                <li>Customer experience</li>
+              </ul>
+            </div>
           </article>
 
           <article className="work-card">
