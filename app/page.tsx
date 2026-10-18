@@ -405,7 +405,7 @@ export default function Page() {
 
           <article className="work-card" tabIndex={0}>
             <div className="work-art work-art-two">
-              <span>WEB</span>
+              <span></span>
 
               <strong>
                 Built to
