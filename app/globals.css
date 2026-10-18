@@ -496,7 +496,57 @@ a {
   line-height: 1.25;
   color: #d6bca2;
 }
+.service-card {
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
 
+/* The description is hidden until you hover or tab to the card */
+.service-card p {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: max-height 0.3s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
+.service-card:hover,
+.service-card:focus-within {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 22px 40px rgba(58, 33, 24, 0.2);
+  z-index: 2;
+}
+
+.service-card:hover p,
+.service-card:focus-within p {
+  max-height: 120px;
+  opacity: 1;
+  transform: translateY(0);
+  color: var(--brown);
+}
+
+.service-card.feature:hover p,
+.service-card.feature:focus-within p {
+  color: #d6bca2;
+}
+
+/* The small and medium cards turn gold on hover */
+.service-card:not(.feature):not(.wide):hover {
+  background: var(--gold);
+}
+
+/* Touch screens can't hover, so always show the text */
+@media (hover: none) {
+  .service-card p {
+    max-height: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .service-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
 /* WHY */
 
 .why {
