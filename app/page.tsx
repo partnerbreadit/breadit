@@ -205,7 +205,7 @@ export default function Page() {
             preserveAspectRatio="none"
             aria-hidden="true"
           >
-            <polyline points="2,70 8,62 32,45 56,28 80,11 95,3" />
+            <polyline points="2,76 8,68 32,51 56,34 80,17 95,9" />
           </svg>
 
           <span className="flowmap-arrow" aria-hidden="true">
